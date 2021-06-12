@@ -1,0 +1,40 @@
+playerX = []
+playerO = []
+
+thisList = [1,2,3,4,5,6,7,8,9,10,11]
+
+
+
+winCondition = 3
+
+class Board:
+
+
+    def __init__ (self, columns, rows):
+        self.columns = columns
+        self.rows = rows
+        self.gridSize = columns * rows
+        self.introList = []
+        self.selections = []
+        for i in range(self.gridSize):
+            self.introList.append(i+1)
+
+    def listInit(self):
+        for i in range(gridSize):
+            self.introList.append(i+1)
+
+    
+    def printRow(self, rowNum, someList):
+        row = "|"
+        for j in range(self.rows):
+            row = row+str(someList[j+rowNum*self.columns])+"|"
+        print (row)
+
+    def printBoard(self,someList):
+        
+        for i in range(self.rows):
+            Board.printRow(self, i, someList)
+
+b = Board(3,3)
+
+b.printBoard(b.introList)
